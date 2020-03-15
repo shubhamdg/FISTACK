@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</head>
+    <body style="background-color:rgb(177, 155, 96);">
+        
+           <form action="/submit" method="POST">
+
+              <center><h1>Aeps Deposit</h1></center>
+
+              <head>
+                  Adhaar Number:<br>
+                  <input type="number" id="adhaarnumber" name="adhaarnumber">
+                  <br>
+                  Amount:<br>
+                  <input type="number" id="amount" name="amount">
+                  <br>
+                  Bank:<br>
+                  <select name="bank" id="bank">
+                    <option value="select">select</option>
+                    </select>
+                
+                <p><strong>Note:</strong> I accept all the above information for Aeps</p>
+                <br><br>
+                
+                           <input type="Submit"  value="submit">
+                             <input type="submit" value="cancel">
+              </head>
+    </body>
+
+    <script>
+      $.get('/bankdetails',function(data){
+        console.log(data);
+        $.each(data, function (index, value) {
+          
+            $('#bank').append($('<option/>', { 
+                value: value.bank_name,
+                text : value.bank_name 
+            }));
+        }); 
+      },'json');
+    </script>
+</html>

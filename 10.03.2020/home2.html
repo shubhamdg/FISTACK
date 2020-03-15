@@ -1,0 +1,30 @@
+<html>
+<body style="background-color: powderblue;">
+    <h1 align ="center">Welcome Home</h1>
+    <h1 style="color: blue;"></h1>
+    <style>
+        .Button1 {
+            background-color : #4CAF50;
+            border: none;
+            color: black;
+            padding : 15px 32px;
+            font-size: 16px;
+        }
+        </style>
+
+<center><button id="Button1">Login</button></center>
+<br>
+
+<center><button id="Button2">New user</button></center>
+
+<script>
+    document.getElementById("Button1").onclick = function () {
+        location.href = "/login";
+    };
+	document.getElementById("Button2").onclick = function () {
+        location.href = "/Signin";
+    };
+</script>
+
+</body>
+</html>
