@@ -1,2 +1,2 @@
-# FISTACK Project For NODE JS Project
-# Reactproject Folder contains my React work
+# Nodejs folder consit my project with Nodejs (FULL STACK ) 
+# Reactproject Folder contains my Reactjs work
